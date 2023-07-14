@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Аутентификация{% endblock %}
+
+{% block content %}
+
+    <h1>Аутентификация</h1>
+    <p>Введите ваш логин и пароль</p>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="логин"></p>
+    </form>
+
+{% endblock %}
