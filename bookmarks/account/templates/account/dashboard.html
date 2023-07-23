@@ -3,5 +3,9 @@
 {% block title %}Чат{% endblock %}
 {% block content %}
   <h1>Чат</h1>
-  <p>Добро пожаловать в чат</p>
+  <p>
+    Добро пожаловать в чат!<br>
+    Вы можете <a href="{% url 'edit' %}">изменить ваш профиль</a>
+    или <a href="{% url 'password_change' %}">сменить пароль</a>.
+  </p>
 {% endblock %}
