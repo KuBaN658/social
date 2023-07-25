@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s0xc6frsv_)=0z(*h^ca0bg1n968xeo&wd(%^%hfcu4vg9mja8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +137,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.mailru.MailruOAuth2',
 ]
 
-
+SOCIAL_AUTH_MAILRU_OAUTH2_KEY = 'a83482bc1085489ea961d9722e3d34df'
+SOCIAL_AUTH_MAILRU_OAUTH2_SECRET = '0f45f17043704e48a5ab62fa959a7416'
